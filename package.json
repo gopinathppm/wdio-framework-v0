@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/.bin/wdio wdio.conf-cucumber.js",
+    "test": "./node_modules/.bin/wdio wdio.conf-cucumber.js"
   },
   "keywords": [],
   "author": "",
@@ -21,7 +21,7 @@
     "@wdio/spec-reporter": "^5.16.5",
     "@wdio/sync": "^5.16.5",
     "chai": "^4.2.0",
-    "chromedriver": "^78.0.1",
+    "chromedriver": "83.0.0",
     "wdio-chromedriver-service": "^5.0.2",
     "wdio-cucumberjs-json-reporter": "^1.1.2",
     "yaml-merge": "0.0.2"
