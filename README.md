@@ -40,3 +40,10 @@ Mocha has been added with basic test
 
 * Mention the feature file you want to run in the wdio.conf-mocha
 * execute the command  `npm run test-mocha`
+
+Reports
+
+Multiple html cucumber report has been added
+
+https://github.com/wswebcreation/wdio-cucumberjs-json-reporter/tree/v5
+
