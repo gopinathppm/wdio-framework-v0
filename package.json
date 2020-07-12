@@ -23,12 +23,13 @@
     "chai": "^4.2.0",
     "chromedriver": "83.0.0",
     "wdio-chromedriver-service": "^5.0.2",
-    "wdio-cucumberjs-json-reporter": "^1.1.2",
+    "wdio-cucumberjs-json-reporter": "2.0.2",
     "yaml-merge": "0.0.2"
   },
   "dependencies": {
     "fs": "0.0.1-security",
     "js-yaml": "^3.13.1",
+    "multiple-cucumber-html-reporter": "1.16.3",
     "yaml": "^1.7.2"
   }
 }

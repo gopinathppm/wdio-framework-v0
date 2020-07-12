@@ -1,3 +1,6 @@
+const { generate } = require('multiple-cucumber-html-reporter');
+const { removeSync } = require('fs-extra');
+
 exports.config = {
     //
     // ====================
@@ -125,7 +128,9 @@ exports.config = {
     // Test reporter for stdout.
     // The only one supported by default is 'dot'
     // see also: https://webdriver.io/docs/dot-reporter.html
-    reporters: ['spec'],
+    reporters: [
+        [ 'cucumberjs-json', {jsonFolder: './test/support/jsonReport',language: 'en'}]
+    ],
 
     //
     // Options to be passed to Mocha.
@@ -154,8 +159,9 @@ exports.config = {
      * @param {Object} config wdio configuration object
      * @param {Array.<Object>} capabilities list of capabilities details
      */
-    // onPrepare: function (config, capabilities) {
-    // },
+    onPrepare: function (config, capabilities) {
+        removeSync('./test/support/jsonReport');
+    },
     /**
      * Gets executed just before initialising the webdriver session and test framework. It allows you
      * to manipulate configurations depending on the capability or spec.
@@ -250,8 +256,18 @@ exports.config = {
      * @param {Array.<Object>} capabilities list of capabilities details
      * @param {<Object>} results object containing test results
      */
-    // onComplete: function(exitCode, config, capabilities, results) {
-    // },
+    onComplete: function(exitCode, config, capabilities, results) {
+        generate({
+            // Required
+            // This part needs to be the same path where you store the JSON files
+            // default = '.tmp/json/'
+            jsonDir: './test/support/jsonReport',
+            reportPath: './test/support/htmlReport',
+            openReportInBrowser: true,
+
+            // for more options see https://github.com/wswebcreation/multiple-cucumber-html-reporter#options
+        });
+    },
     /**
     * Gets executed when a refresh happens.
     * @param {String} oldSessionId session ID of the old session
