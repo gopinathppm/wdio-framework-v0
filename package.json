@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/.bin/wdio wdio.conf-cucumber.js"
+    "test": "./node_modules/.bin/wdio wdio.conf-cucumber.js",
+    "test_visual": "./node_modules/.bin/wdio wdio.conf-applitools.js",
+    "selenium": "java -jar ./test/support/utilities/selenium-server-standalone-3.141.59.jar"
   },
   "keywords": [],
   "author": "",
@@ -22,11 +24,12 @@
     "@wdio/sync": "^5.16.5",
     "chai": "^4.2.0",
     "chromedriver": "83.0.0",
-    "wdio-chromedriver-service": "^5.0.2",
     "wdio-cucumberjs-json-reporter": "2.0.2",
     "yaml-merge": "0.0.2"
   },
   "dependencies": {
+    "@wdio/applitools-service": "6.0.16",
+    "@wdio/selenium-standalone-service": "6.1.14",
     "fs": "0.0.1-security",
     "js-yaml": "^3.13.1",
     "multiple-cucumber-html-reporter": "1.16.3",
