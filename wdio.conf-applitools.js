@@ -113,7 +113,9 @@ exports.config = {
     // your test setup with almost no effort. Unlike plugins, they don't add new
     // commands. Instead, they hook themselves up into the test process.
     services: ['selenium-standalone','applitools'],
-    applitoolsKey: 'IrPJ6LVvTMaN109S5LbpMgFiAK1CfJJSpntQut103lRN10750110',
+    applitools: {
+        key: 'IrPJ6LVvTMaN109S5LbpMgFiAK1CfJJSpntQut103lRN10750110',
+    },
 
     // Framework you want to run your specs with.
     // The following are supported: Mocha, Jasmine, and Cucumber

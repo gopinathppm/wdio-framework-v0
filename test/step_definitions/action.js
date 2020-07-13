@@ -4,5 +4,6 @@ import * as helper from '../support/helper';
 
 
 Then(/^I should take the screenshot$/,() => {
-    browser.takeSnapshot('main page');
+    browser.debug();
+    helper.takeSnapshot('main page');
 });

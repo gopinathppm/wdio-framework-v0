@@ -31,3 +31,12 @@ export const assertTextEqual = (element, expectedText) => {
 export const waitFor = (seconds) => {
     browser.pause(seconds * 1000);
 };
+
+export const takeSnapshot = (name) => {
+    try {
+        browser.takeSnapshot(name);
+    } catch (err) {
+        throw new Error('Screenshot not captured').stack;
+    }
+
+}
