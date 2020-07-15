@@ -31,3 +31,8 @@ export const assertTextEqual = (element, expectedText) => {
 export const waitFor = (seconds) => {
     browser.pause(seconds * 1000);
 };
+
+export const setValue = (selector, value) => {
+    console.log("value, selector-->", value, selector);
+    $(selector).setValue(value);
+}

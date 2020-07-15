@@ -14,3 +14,8 @@ Then(/^I verify the "([^"]*)" text as "([^"]*)"$/,(selector, expectedValue) => {
     selector = dataSelector[selector];
     helper.assertTextEqual(selector,expectedValue);
 });
+
+Then(/^I enter "([^"]*)" in "([^"]*)"$/, function (value, selector) {
+    selector = dataSelector[selector];
+    helper.setValue(selector,value);
+});
