@@ -30,6 +30,7 @@
     "yaml-merge": "0.0.2"
   },
   "dependencies": {
+    "@applitools/eyes-webdriverio5-service": "1.6.6",
     "@wdio/applitools-service": "6.0.16",
     "@wdio/selenium-standalone-service": "6.1.14",
     "fs": "0.0.1-security",
