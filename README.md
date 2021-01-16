@@ -6,16 +6,16 @@ A Behavioral driven automation framework with **webdriverio** and **cucumber-js*
 
 
 ## Pre-requisites
-Stable node version greater than or equal to `8.x.x`
-A package manager. Either `npm`
-Java
+Stable node version greater than or equal to `12.18.3`
+A package manager. Either `npm` or 'yarn'
+
 
 npm config set registry https://registry.npmjs.org/
 npm config set registry https://registry.npmjs.org/ --global
 npm config set strict-ssl false
 npm config set strict-ssl false --global
 
-Access to gitlabs & home insurance space `https://github.com/gopinathppm/wdio-framework-v0.git`
+Access to gitlabs & home insurance space `https://github.com/gopinathppm/wdio-framework-v6.git`
 
 ## Framework Installation
 * clone the repository from github
@@ -47,3 +47,6 @@ Multiple html cucumber report has been added
 
 https://github.com/wswebcreation/wdio-cucumberjs-json-reporter/tree/v5
 
+Feature file:
+
+An example feature has been created to launch chrome and go to facebook.com, then log in

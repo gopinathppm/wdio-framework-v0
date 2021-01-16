@@ -142,7 +142,7 @@ exports.config = {
     cucumberOpts: {
         requireModule: ['@babel/register'],
         require: ['test/step_definitions/**.js'],
-        timeout: 7000,
+        timeout: 10000,
         ignoreUndefinedDefinitions: false,
         format: 'json',
     },
