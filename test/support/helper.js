@@ -19,7 +19,7 @@ export const getText = (element) => {
         return text;
     }
     catch (err){
-        throw new Error(`Not an element`).stack;
+        throw new Error(element + `is not an element`).stack;
     }
 };
 
@@ -33,6 +33,16 @@ export const waitFor = (seconds) => {
 };
 
 export const setValue = (selector, value) => {
-    console.log("value, selector-->", value, selector);
     $(selector).setValue(value);
 }
+
+export const click = selector => {
+    $(selector).scrollIntoView();
+    $(selector).click();
+};
+
+export const verifyTitle = (value) => {
+    const expTitile = browser.getTitle();
+    assert.equal(expTitile, value);
+
+};
