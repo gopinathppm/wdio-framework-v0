@@ -1,5 +1,5 @@
 {
-  "name": "wdio-framework-v6",
+  "name": "wdio-framework-v0",
   "version": "1.0.0",
   "description": "WebdriverIO framework",
   "main": "index.js",

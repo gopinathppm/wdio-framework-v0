@@ -15,7 +15,7 @@ npm config set registry https://registry.npmjs.org/ --global
 npm config set strict-ssl false
 npm config set strict-ssl false --global
 
-Access to gitlabs & home insurance space `https://github.com/gopinathppm/wdio-framework-v6.git`
+Access to gitlabs & home insurance space `https://github.com/gopinathppm/wdio-framework-v0.git`
 
 ## Framework Installation
 * clone the repository from github
