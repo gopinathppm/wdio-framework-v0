@@ -4,7 +4,11 @@
   "description": "WebdriverIO framework",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/.bin/wdio wdio.conf-cucumber.js"
+    "test": "./node_modules/.bin/wdio wdio.conf-cucumber.js",
+    "test_grid": "./node_modules/.bin/wdio wdio.conf.selenium.grid.js",
+    "selenium:start": "java -jar test/support/tools/selenium-server-standalone-3.141.59.jar -role hub",
+    "selenium:hub": "java -Dwebdriver.chrome.driver='test/support/tools/chromedriver' -jar test/support/tools/selenium-server-standalone-3.141.59.jar -role webdriver -hub http://192.168.0.37:4444/grid/register -port 5566",
+    "selenium" : "npm run selenium:start & npm run selenium:hub"
   },
   "keywords": [],
   "author": "",
@@ -33,6 +37,6 @@
     "yaml": "^1.7.2"
   },
   "engines": {
-    "node":"12.18.3"
+    "node": "12.18.3"
   }
 }

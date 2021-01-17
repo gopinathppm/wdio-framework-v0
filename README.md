@@ -50,3 +50,7 @@ https://github.com/wswebcreation/wdio-cucumberjs-json-reporter/tree/v5
 Feature file:
 
 An example feature has been created to launch chrome and go to facebook.com, then log in
+
+Selenium grid:
+
+In this branch, selenium grid has been integrated and can spin up to 5 chrome, 5 mozilla and 1 IE(on windows) 
